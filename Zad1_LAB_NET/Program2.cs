@@ -11,12 +11,17 @@ namespace Zad1_LAB_NET
     {
         static void Main(string[] args)
         {
+            System.Console.Write(" Proszę podać seed: \n ");
+            int seed = int.Parse(Console.ReadLine());
             Plecak Plec = new Plecak();
-            RandomNumberGenerator x = new RandomNumberGenerator(1);
+            RandomNumberGenerator x = new RandomNumberGenerator(seed);
 
             Przedmiot Pom = new Przedmiot();
 
-            Plec.UstawMaxWage(50);
+            System.Console.Write(" Proszę podać maksymalna wage dopuszczalna dla plecaka: \n ");
+            int max = int.Parse(Console.ReadLine());
+
+            Plec.UstawMaxWage(max);
 
             for  (int i  =  0; i  <  10; i++) {
               
